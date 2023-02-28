@@ -5,8 +5,8 @@ from django.contrib import messages
 from . models import ProblemStatements
 # Create your views here.
 
-def index(request):
-    return render(request,'index.html')
+def home(request):
+    return render(request,'home.html')
 
 def register(request):
 
