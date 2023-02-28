@@ -1,1 +1,40 @@
+{% load static%}
 <h1>Problem Statements</h1>
+
+<style>
+    *{
+        font-family:cursive;
+    }
+    table, th, td {
+        border: 1px solid black;
+      }
+      img{
+        height: 200px;
+        width: 150px;
+      }
+</style>
+{{for problems in problem_statement}}
+<table >
+    <thead>
+        <tr>
+            <th>
+                {{problem_statement.statement_name}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <img src="{% static 'img/tasmarc.jpg' %}" alt="">
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>
+                {{problem_statement.statement_desc}}
+            </td>
+        </tr>
+    </tfoot>
+</table>
+{% endfor%}
